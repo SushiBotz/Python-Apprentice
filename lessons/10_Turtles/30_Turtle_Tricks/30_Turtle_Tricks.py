@@ -25,14 +25,29 @@ tina.begin_fill()
 tina.circle(50)                      # Draw a circle with radius 50
 tina.end_fill()
 tina.penup() 
-tina.goto(300,300,0,0)   
+tina.goto(300,300,)
 tina.pendown()
 tina.pencolor('blue')               # Set the pen color to brown
 tina.fillcolor('blue')              # Set the fill color to brown
 tina.begin_fill()
 tina.circle(50)                      # Draw a circle with radius 50
 tina.end_fill()
-turtle.exitonclick()       
+tina.penup()
+tina.goto(100,100)
+tina.pendown()
+tina.pencolor('brown')               # Set the pen color to brown
+tina.fillcolor('brown')              # Set the fill color to brown
+tina.begin_fill()
+tina.circle(50)                      # Draw a circle with radius 50
+tina.end_fill()
+tina.penup() 
+tina.pendown()
+tina.pencolor('blue')               # Set the pen color to brown
+tina.fillcolor('blue')              # Set the fill color to brown
+tina.begin_fill()
+tina.circle(50)                      # Draw a circle with radius 50
+tina.end_fill()
+
              # Close the window when we click on it
 
 # Dont forget to check in your code!
