@@ -17,7 +17,8 @@ tina = turtle.Turtle()
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
 tina.speed(5)               # Make the turtle move as fast, but not too fast. 
 
-for i in range(5):
+for i in range(5):   
+    print('Loop iteration', i)   
     tina.forward(150)                       # Move tina forward by the forward distance
-    tina.left(72)                           # Turn tina left by the left turn
+    tina.left(72)                  # Turn tina left by the left turn
 turtle.exitonclick()                    # Close the window when we click on i

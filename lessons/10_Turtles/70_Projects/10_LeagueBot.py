@@ -14,6 +14,4 @@ import turtle as turtle
 screen = turtle.Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('white')
-set_background_image(screen, "leaguebot.fig")
-
-... # Your Code Here
+#(screen, "leaguebot.fig")
