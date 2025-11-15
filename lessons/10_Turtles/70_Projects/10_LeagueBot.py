@@ -16,7 +16,7 @@ def set_turtle_image(turtle, image_name):
     """Set the turtle's shape to a custom image."""
 
     from pathlib import Path
-    image_dir = Path(__file__).parent.parent.parent/ "images"
+    image_dir = Path(__file__).parent.parent/ "images"
     image_path = str(image_dir / image_name)
 
     screen = turtle.getscreen()
@@ -30,7 +30,7 @@ screen.setup(width=600, height=600)
 # Create a turtle and set its shape to the custom GIF
 t = turtle.Turtle()
 
-set_turtle_image(turtle, "league_bot.gif" )
+set_turtle_image(turtle, "leaguebot_bolt.gif" )
 
 tina.pendown()
 tina.pencolor('blue')  
