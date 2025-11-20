@@ -28,9 +28,8 @@ screen = turtle.Screen()
 screen.setup(width=600, height=600)
 
 # Create a turtle and set its shape to the custom GIF
-t = turtle.Turtle()
 
-set_turtle_image(turtle, "leaguebot_bolt.gif" )
+set_turtle_image(tina, "leaguebot_bolt.gif" )
 
 tina.pendown()
 tina.pencolor('blue')  
@@ -39,10 +38,11 @@ for i in range(6):
     tina.forward(150)                       # Move tina forward by the forward distance
     tina.left(60)  
 
-tina = turtle.Turtle()      
+   
 screen = turtle.Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('white')
 #(screen, "leaguebot.fig")
 
 
+turtle.exitonclick()

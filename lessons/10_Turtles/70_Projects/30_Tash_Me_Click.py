@@ -6,3 +6,5 @@
 # Hint: See 08a_More Turtle Programs, section 'Click on the Screen'
  
 ... # Your code here
+
+#Copy some of the code from 60,40
