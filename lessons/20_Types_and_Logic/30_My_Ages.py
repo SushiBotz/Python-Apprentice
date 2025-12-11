@@ -33,14 +33,57 @@ from tkinter import messagebox, simpledialog, Tk # import required modules
 window = Tk()     # Create a window object
 window.withdraw() # Hide the window; we just want to see pop ups
 
-# Ask the user's age
+Age = input("How old are you?")
+#Ask the user's age
+
+if Age < '2': 
+    print("You are a baby since you are younger than 2 years old")
+
+elif Age == '2': 
+    print("You are a baby since you are 2 years old")
+
+elif Age < '5': 
+    print("You are a toddler since you are 3-5 years old")
+
+elif Age == '5': 
+    print("You are a toddler since you are 5 years old")
+
+elif Age < '12': 
+    print("You are a child since you are 6-12 years old")
+
+elif Age == '12': 
+    print("You are a child since you are 12 years old")
+
+elif Age == '13':
+    print("You're pretty awesome")
+
+elif Age < '19': 
+    print("You are a teen since you are 13-19 years old")
+
+elif Age == '19': 
+    print("You are a teen since you are 19 years old")
+
+elif Age < '64': 
+    print("You are a adult since you are 20-65 years old")
+
+elif Age == '65': 
+    print("You are a adult since you are 65 years old")
+
+elif Age > '65': 
+    print("You are a senior since you are more than 65 years old")
+
+else:
+    print("You are a senior since you are 65 years old")
+
+
+
 
 # Use if statements to determine the age group
 # and create a message
 
 # Show the message to the user
 
-window.mainloop()  # Keeps the window open
+    window.mainloop()  # Keeps the window open
 
 # TODO: 
 # Try to write your program so you only need to use one messagebox.showinfo() function.
