@@ -32,15 +32,22 @@ one = simpledialog.askfloat("","Give a number")
 two = simpledialog.askfloat("","Give me another number")
 # Ask the user for the math operation
 Operation = simpledialog.askstring("","Give me an operation, here are your options, Multiplication, Division, Addition and Subtraction")
-# Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
+# Use if-elif-else statements to provide the desired math operation on thea
+#  numbers and display the result.
 addition = one+two
 multiplication = one*two
 division= one/two
 subtraction = one-two  
 if Operation == 'Addition':
     messagebox.showinfo("","The two number added together is " + str(addition))
-   
 
+elif Operation == 'Multiplication':
+    messagebox.showinfo("", "The two numbers when multiplied together is " + str(multiplication))
 # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
-
+elif Operation == 'Division':
+    messagebox.showinfo("", "The two numbers when divided by eachother is " + str(division))
+elif Operation == 'Subtraction':
+    messagebox.showinfo("", "The two numbers when subtracted are " + str(subtraction))
+else: 
+    messagebox.showinfo("","Rerun the program and enter one of the 4 options, no lowercase please")
 # Keep the window open

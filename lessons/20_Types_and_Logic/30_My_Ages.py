@@ -67,7 +67,7 @@ elif Age < '64':
     print("You are a adult since you are 20-65 years old")
 
 elif Age == '65': 
-    print("You are a adult since you are 65 years old")
+    print("You are a senior since you are 65 years old")
 
 elif Age > '65': 
     print("You are a senior since you are more than 65 years old")
