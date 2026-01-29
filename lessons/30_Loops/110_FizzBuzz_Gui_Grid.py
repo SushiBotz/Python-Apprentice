@@ -14,7 +14,7 @@ Additionally, If you are displaying a number  color the numbers as follows:
 
 * If the sum of the digits of the number is even, color the number blue
 * If the sum of the digits of the number is odd, color the number red
-
+Side Note: Except on the first line a lot of the thing well be blue (odd + odd/ even + even = even, odd + even = odd)
 Here is how you can display a number in your grid. Call this function in your loop
 to display the number in the grid cell at the row and column you specify.
 
@@ -34,13 +34,28 @@ app = App("Numbers Grid", layout="grid")
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
-
+for i in range (10):
+    for j in range(1,11):
+        print((i) * 10 + (j) , end = "  ")
+        t = str(j+10*i)
+        Text(app, text=t, grid=[j,i], color="black")
+    print() 
 # In the loop, calculate or increment the number
 
-# Use % determining the display, using FizzBuzz rules
+# Use % determining the display, using FizzBuzz rules 
+
+#Fizz Buzz Rules, prob need to merge with the Grid For Loop (My Writing)
+#    if i % 15 == 0:
+#         print(i, '🐍 snake!')
+#     elif i % 5 == 0:
+#         print(i, '🦡 badger')
+#     elif i % 3 == 0:
+#         print(i, '🍄 mushroom')
+#     else: 
+#         print(i)
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
-# Call Text(app, text='...', grid=[col, row], color=...) to display something. 
+# Call Text(app, text='...', grid=[col, row], color=...) to display something.
 
 app.display()
