@@ -36,10 +36,27 @@ app = App("Numbers Grid", layout="grid")
 # Or you can use a single loop and calculate the row and column
 for i in range (10):
     for j in range(1,11):
-        print((i) * 10 + (j) , end = "  ")
-        t = str(j+10*i)
-        Text(app, text=t, grid=[j,i], color="black")
-    print() 
+        print((i) * 10 + (j) , end = "  ") 
+        print()
+        if (j+10*i) % 15 == 0:
+            Text(app, text='🐍', grid=[j,i], color="blue")
+            print(i, '🐍 snake!')
+        elif (j+10*i) % 5 == 0:
+            print(i, '🦡 badger')
+            Text(app, text='🦡', grid=[j,i], color="blue")
+        elif (j+10*i) % 3 == 0:
+            print(i, '🍄 mushroom')
+            Text(app, text='🍄', grid=[j,i], color="blue")
+        elif ((j+10*i) % 10 + (j+10*i)//10) % 2 == 1:
+            t = str(j+10*i)
+            Text(app, text=t, grid=[j,i], color="red")
+            print()
+        
+        else: 
+            t = str(j+10*i)
+            Text(app, text=t, grid=[j,i], color="blue")
+            print()
+
 # In the loop, calculate or increment the number
 
 # Use % determining the display, using FizzBuzz rules 
