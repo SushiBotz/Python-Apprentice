@@ -37,19 +37,36 @@ def ask_integer(prompt):
     while True:
         try:
             return int(input(prompt))
-        except ValueError:
+        except ValueError: 
             print("Please enter a valid number!")
 
 # Pick the random number
+number = random.randint(1, 100)
 
+if number % 7 == 0:
+    number = random.randint(1, 100)
+
+
+
+
+    
 # In your loop:
 
     # Get the user's guess
-
+    guess = ask_integer("Guess a number between 1 and 100")
     # If the user's guess is divisible by 7, tell the user to start over
 
+if guess % 7 == 0:
+    print("That is a very bad number, starting over")
     # If the user's guess is too high, tell the user
-
+elif guess > number:
+    guess = False
+    print("Your guess is to high")
     # If the user's guess is too low, tell the user
-    
+elif guess < number:
+    guess = False
+    print("Your guess is to low")
     # If the user's guess is correct, tell the user and break out of the loop
+   else:
+    guess = True
+    print("You guessed correctly") 
