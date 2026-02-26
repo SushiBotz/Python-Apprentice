@@ -33,18 +33,16 @@ at the bottom of the editor screen; this program does not use the GUI.
 import random
 
 def ask_integer(prompt):
-    """Function to ask the user for an integer"""
-    while True:
-        try:
-            return int(input(prompt))
-        except ValueError: 
-            print("Please enter a valid number!")
+   """Function to ask the user for an integer"""
+   while True:
+       try:
+           return int(input(prompt))
+       except ValueError: 
+           print("Please enter a valid number!")
 
 # Pick the random number
 number = random.randint(1, 100)
 
-if number % 7 == 0:
-    number = random.randint(1, 100)
 
 
 
@@ -53,20 +51,23 @@ if number % 7 == 0:
 # In your loop:
 
     # Get the user's guess
-    guess = ask_integer("Guess a number between 1 and 100")
+
     # If the user's guess is divisible by 7, tell the user to start over
 
-if guess % 7 == 0:
-    print("That is a very bad number, starting over")
-    # If the user's guess is too high, tell the user
-elif guess > number:
-    guess = False
-    print("Your guess is to high")
-    # If the user's guess is too low, tell the user
-elif guess < number:
-    guess = False
-    print("Your guess is to low")
-    # If the user's guess is correct, tell the user and break out of the loop
-   else:
-    guess = True
-    print("You guessed correctly") 
+
+while True:
+    
+    guess = ask_integer("Guess a number between 1 and 100")
+    while guess % 7 == 0:
+        print("That is a very bad number, starting over")
+        guess = ask_integer("Guess a number between 1 and 100")        
+# If the user's guess is too high, tell the user
+    if guess > number:
+        print("Your guess is too high")
+# If the user's guess is too low, tell the user
+    elif guess < number:
+        print("Your guess is too low")
+# If the user's guess is correct, tell the user and break out of the loop
+    else:
+        print("You guessed correctly") 
+        break
