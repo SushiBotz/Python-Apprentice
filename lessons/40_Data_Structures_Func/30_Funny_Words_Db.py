@@ -20,7 +20,7 @@ The module has a limit of storing up to 5 definitions. If the limit is reached,
 an error message will be displayed and new definitions will not be added.
 """
 
-# Implement the functions below
+# Implement the functions below.
 
 def add_definition(db, key, value):
     """
@@ -37,16 +37,25 @@ def add_definition(db, key, value):
     If there are already 5 items in the database, an error message is displayed and the new item is not added.
     """
 
-    # Check the limit
+def check_db_limit(db):
+    if len(db) > 5:
+        error("You can only have 5 defenition delete some to add some more")
+        return False
+    return True
 
-    # Set the item in the database
-
-    pass
+def add_definition(db, key, value):
+    if check_db_limit(db):
+            db[key] = value
 
 
 def delete_definition(db, key):
+    check_db_limit(db)
+    if len(db) < 5:
+        if key in db:
+            del db[key]
+    pass
     """
-    Deletes the definition associated with the given key from the database.
+    
 
     Args:
         db (dict): The database containing the key-value pairs.
@@ -58,11 +67,15 @@ def delete_definition(db, key):
 
     # Delete the item from db if it is present
 
-    pass
+    pass 
 
 
 def is_funny(definition):
     """
+    if definition is_funny:
+        return True
+    else:
+        return False
     Check if the definition is funny, which means it contains one of the words:
 
         'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
@@ -75,8 +88,7 @@ def is_funny(definition):
     """
     
     # Return True if the definition contains any of the funny words, False otherwise
-
-    return False
+    pass
 
 def update_listbox(db):
     """
@@ -91,7 +103,7 @@ def update_listbox(db):
     l = [
         "Item 1: Fake Definition 1",
         "Item 2: Fake Definition 2",
-        "Item 3: fake Definition 3"
+        "Item 3: Fake Definition 3"
     ]
 
     # Add each definition to a string
