@@ -18,7 +18,7 @@ def check_row(l):
 
     return None
 
-def check_win(board):
+def check_win(board): 
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
